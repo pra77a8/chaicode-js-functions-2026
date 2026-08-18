@@ -39,15 +39,31 @@
  */
 export const calcStrikeRate = (runs, balls) => {
   // Your code here
+  if(balls<=0 || runs<0)
+  {
+    return 0;
+  }
+  return Number(((runs/balls)*100).toFixed(2))
 };
 
 export const calcEconomy = (runsConceded, overs) => {
   // Your code here
+   if(overs<=0 || runsConceded<0)
+  {
+    return 0;
+  }
+  return Number((runsConceded/overs).toFixed(2));
 };
 
 export const calcBattingAvg = (totalRuns, innings, notOuts = 0) => {
   // Your code here
+  if(innings<=0 || notOuts<=0)
+  {
+    return 0;
+  }
+  return Number(totalRuns/(innings-notOuts).toFixed(2));
 };
+
 
 export const isAllRounder = (battingAvg, economy) => {
   // Your code here
@@ -56,3 +72,4 @@ export const isAllRounder = (battingAvg, economy) => {
 export const getPlayerCard = (player) => {
   // Your code here
 };
+calcStrikeRate(50, 25);

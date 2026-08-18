@@ -46,6 +46,9 @@
  */
 export function createDialogueWriter(genre) {
   // Your code here
+  return{
+    
+  }
 }
 
 export function createTicketPricer(basePrice) {
